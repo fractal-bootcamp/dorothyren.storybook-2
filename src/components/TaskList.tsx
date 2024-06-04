@@ -43,31 +43,33 @@ type TaskListProps = {
 //     return <TaskList tasks={[{ description: "", title: "", isComplete: false }]} />
 // }
 
-export function TaskList(props: TaskListProps = { tasks: defaultTasks }) {
+export const TaskList = (props: TaskListProps = { tasks: defaultTasks }) =>
+{
+    const arrayofTaskObjects = props["tasks"]
+
     return (
         <>
-            {/* {
-            props.tasks.map(task => {
+            {arrayofTaskObjects.map(singleTaskObject => {
+                return (
+                    <div>
+                        {Task(singleTaskObject)}
+                    </div>
+                )
+            })}
+         </>
+          )
+        }
 
-                return `{
-                    title: task.title,
-                    description: task.description,
-                    isComplete: task.isComplete
-                }`
-            }
-        )
-        } */}
-            <div className="flex-col flex-grow:1 ml-4">
-                <div className="flex-row text-lg text-black font-family:Inter ">
-                    {props.tasks[0].title}
-                </div>
-                <div className="text-gray-500 text-sm">
-                    {props.tasks[0].description}
-                </div>
-            </div>
-        </>
-    )
-}
+        //         < div className="flex-col flex-grow:1 ml-4">
+        //     <div className="flex-row text-lg text-black font-family:Inter ">
+        //         {props.tasks[0].title}
+        //     </div>
+        //     <div className="text-gray-500 text-sm">
+        //         {props.tasks[0].description}
+        //     </div>
+        // </div >
+        // </>
+   
 
 // function projectList(projectList: {
 //     title: string;
