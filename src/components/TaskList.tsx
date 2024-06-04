@@ -51,8 +51,9 @@ export const TaskList = (props: TaskListProps = { tasks: defaultTasks }) =>
         <>
             {arrayofTaskObjects.map(singleTaskObject => {
                 return (
-                    <div>
-                        {Task(singleTaskObject)}
+                    <div key ={singleTaskObject.title}>
+                        {/* {Task(singleTaskObject)} */}
+                        <Task title={singleTaskObject.title} description={singleTaskObject.description} isComplete={singleTaskObject.isComplete} />
                     </div>
                 )
             })}
