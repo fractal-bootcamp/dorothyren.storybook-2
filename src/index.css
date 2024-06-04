@@ -15,3 +15,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.checkbox-container {
+  @apply flex flex-row max-w-sm w-[90%] h-16 items-center p-4 rounded-lg
+}

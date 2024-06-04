@@ -1,39 +1,75 @@
-.task-card {
-    font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-weight: 400;
-    font-size: 18px;
+.task-card-incomplete {
+    height: 77px;
+    width: 462px;
+    top: -3px;
+    left: -4866px;
     border: 1;
-    border-radius: 8em;
+    border-radius: 4em;
+    border-color: D8D8D8;
     cursor: pointer;
-    display: inline-block;
-    line-height: 21.78p;
+    display: inline-block flex;
+    background-color: #FFFFFF;
+}
+
+.task-card-complete {
+    height: 77px;
+    width: 462px;
+    top: -3px;
+    left: -4866px;
+    border: 1;
+    border-radius: 4em;
+    cursor: pointer;
+    display: inline-block flex;
+    background-color: #E2FFE5;
+}
+
+.task-checkbox-container {
+    width: 30px;
+    flex-shrink: 0;
+}
+
+.task-content-container {
+    flex-grow: 1;
 }
 
 .task-card-title {
-    color: white;
-    background-color: #1ea7fd;
+    font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    line-height: 21.78;
+    color: #000000;
+    background-color: transparent;
+
 }
 
 .task-card-description {
     color: #333;
     background-color: transparent;
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
+    line-height: 16.94;
+    font-size: 14px;
 }
 
-.task-card--complete {
-    background: #E2FFE5;
-
-}
-
-.task-card--incomplete {}
 
 .task-checkbox-isComplete {
+    width: 25px, ;
+    height: 25px;
+    top: 23px;
+    left: -4848px;
     border-radius: 8em;
+    border: 1;
+    border-color: #D8D8D8;
     background: #359845;
 }
 
 .task-checkbox-notComplete {
+    width: 25px, ;
+    height: 25px;
+    top: 23px;
+    left: -4848px;
+    border: 1;
     border-radius: 8em;
+    border-color: #D8D8D8;
     background: #FFFFFF;
 
 }
