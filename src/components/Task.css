@@ -1,0 +1,39 @@
+.task-card {
+    font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    border: 1;
+    border-radius: 8em;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 21.78p;
+}
+
+.task-card-title {
+    color: white;
+    background-color: #1ea7fd;
+}
+
+.task-card-description {
+    color: #333;
+    background-color: transparent;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
+}
+
+.task-card--complete {
+    background: #E2FFE5;
+
+}
+
+.task-card--incomplete {}
+
+.task-checkbox-isComplete {
+    border-radius: 8em;
+    background: #359845;
+}
+
+.task-checkbox-notComplete {
+    border-radius: 8em;
+    background: #FFFFFF;
+
+}
