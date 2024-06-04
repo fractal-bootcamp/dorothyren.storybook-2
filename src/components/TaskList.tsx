@@ -6,7 +6,7 @@ import { ReactElement } from "react"
 // React component is a building block of React - it's a box that can hold other boxes (turn one project's data into one React component)
 // map takes all the data and applies the transformation to all of them
 
-export const defaultTaskListProps =
+export const defaultTasks =
     [
         {
             title: "Dishwashing",
@@ -31,16 +31,38 @@ export const defaultTaskListProps =
 
     ]
 
+type TaskListProps = {
+    tasks: {
+        title: string;
+        description: string;
+        isComplete: boolean;
+    }[]
+}
 
-export function TaskList(props = defaultTaskListProps) {
+// const ParentToTaskList = () => {
+//     return <TaskList tasks={[{ description: "", title: "", isComplete: false }]} />
+// }
+
+export function TaskList(props: TaskListProps = { tasks: defaultTasks }) {
     return (
         <>
+            {/* {
+            props.tasks.map(task => {
+
+                return `{
+                    title: task.title,
+                    description: task.description,
+                    isComplete: task.isComplete
+                }`
+            }
+        )
+        } */}
             <div className="flex-col flex-grow:1 ml-4">
                 <div className="flex-row text-lg text-black font-family:Inter ">
-                    {props[0].title}
+                    {props.tasks[0].title}
                 </div>
                 <div className="text-gray-500 text-sm">
-                    {props[0].description}
+                    {props.tasks[0].description}
                 </div>
             </div>
         </>

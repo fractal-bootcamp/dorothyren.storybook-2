@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { defaultTaskListProps, TaskList } from '../components/TaskList';
+import { defaultTasks, TaskList } from '../components/TaskList';
 import "../index.css";
 
 const meta = {
@@ -15,6 +15,5 @@ export default meta
 type Story = StoryObj<typeof meta>
 
 export const Incomplete: Story = {
-    args: defaultTaskListProps
+    args: { tasks: defaultTasks }
 }
-
